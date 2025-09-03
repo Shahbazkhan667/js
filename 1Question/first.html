@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="heading">
+ <h1 id="name"> age converter </h1>
+ <h2> years into days</h2> 
+ </div>
+ <div class="field">
+ <label for="age in years">  Enter your age in years</label>
+ <input type="number" value="enter your age years" id="age">
+ 
+  <label for="age in years"> age in days</label>
+ <input type="number" value="your age in days" id="days" readonly> 
+ </div>
+
+ <div class="btn1">
+ <button id="btn" onclick="convertAge()">convert into days  </button></div>
+ </div>
+
+
+
+<style> 
+    .contain{
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 30px black;
+        padding: 20px;
+
+    }
+    .heading{
+        color: rgb(66, 4, 4);
+        text-align: center;
+       
+    }
+    h2{
+        margin: 0%;
+        height: min-content;
+
+    }
+     h1{
+        margin: 0%;
+        height: min-content;
+        
+    }
+    .field{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    .field label{
+color: rgb(53, 5, 5);
+padding-top: 10%;
+
+    }
+    .field {
+
+    }
+
+    .btn1 button{
+        padding: 10px;
+        background-color: brown;
+        text-transform: capitalize;
+        border : solid 2px gray;
+        border-radius : 10px;
+        color: navajowhite;
+        text-transform: capitalize;
+            }
+</style>
+
+
+
+
+
+
+
+</body>
+<script src="first.js"></script>
+</html>
