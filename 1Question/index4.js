@@ -8,3 +8,7 @@ function nextNumber(){
     }
 
 }
+
+setTimeout(() => {
+    console.log("hi ")
+}, 3000);
