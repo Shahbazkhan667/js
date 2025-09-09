@@ -24,6 +24,85 @@
  </div>
 
 
+<div class="contain">
+        <div class="heading">
+ <h1 id="name"> hours converter  </h1>
+ <h2> hours into  seconds </h2> 
+ </div>
+ <div class="field">
+ <label for=" hours">  write no of hours  </label>
+ <input type="number" value="enter hours " id="hours">
+ 
+  <label for="age in years"> seconds</label>
+ <input type="number" value="seconds " id="seconds" readonly> 
+ </div>
+
+ <div class="btn1">
+ <button id="btn" onclick="converthours()">convert into seconds</button></div>
+ </div>
+
+
+ <div class="question3">
+ <form> 
+        <div class="heading">
+            <h1> Hello type word </h1>
+            <h2> capitalized first letter</h2>
+            <div class="container">
+            <input type="text" id="text">
+                <input type="button" id="btn" value="clickme" onclick="capitaliseWord()">
+          </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="question4">
+    <div class="body">
+    <h1 style="text-transform: uppercase;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">find next number  </h1>
+<h2> Enter To Find  Next Number </h2>
+<div class="div">
+<input type="number" id="integar">
+<button onclick="nextNumber()">click me </button>
+<p id="result"></p>
+</div>
+</div></div>
+
+
+<div class="question5">
+<div class="container">
+<h1 style="text-transform: uppercase;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> enter your hieght and Wieght</h1>
+<div class="div">
+<label> enter your hieght in meters</label>
+<input type="text" value="" class="hieght"></div>
+<div class="div" >
+<label> enter your Wieght in kg</label><input type="text" value="" class="weight">
+</div>
+<input type="button" onclick="calculatenBmi()" value="calculate">
+<p id="resultBmi">hi </p> 
+</div>
+</div>
+<div class="question6">
+ <h2> Random Array First & Last Element</h2>
+  <button onclick="showArray()">Generate Random Array</button>
+  <p id="output"></p>
+</div>
+<div class="question7">
+<div class="input">
+    <h2 style ="text-transform: uppercase;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+        three boxes  
+    </h2>
+    <p>
+        Pretend there are three text boxes. The user will provide integer numbers and the addition of two text-boxes will be shown in the third text-box. When the user input an integer in the first text-box, the resultant (third) text-box should display answer as NaN. After providing an input into the second text-box the addition result should be displayed in the third text-box. [Hint: Use Event handling concept]: srf smjhao not code
+    </p>
+    <div class="input-container">
+    <input type="number" value="" id="firstbox">
+     <input type="number" value="" id="secondbox">
+     <Label>
+        result is  sum of two numbers in below box
+     </Label>
+      <input type="text" value="" id="thirdbox" readonly></div>
+</div>
+</div>
 
 <style> 
     .contain{
@@ -62,10 +141,7 @@ color: rgb(53, 5, 5);
 padding-top: 10%;
 
     }
-    .field {
-
-    }
-
+    
     .btn1 button{
         padding: 10px;
         background-color: brown;
@@ -74,6 +150,71 @@ padding-top: 10%;
         border-radius : 10px;
         color: navajowhite;
         text-transform: capitalize;
+            }
+            .question3{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: solid 20px black;
+                padding: 10%;
+            }
+.question4{
+
+             display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: solid 20px black;
+                padding: 10%;
+            }
+             .question5{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: solid 20px black;
+                padding: 10%;
+               
+            }
+            .question5 input{
+                margin: 10px;
+            }
+            
+             .question6{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: solid 20px black;
+                padding: 10%;
+               
+            }
+             .question7{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: solid 20px black;
+                padding: 10%;
+                 justify-content: center;
+                align-content: center;
+            }
+            .question7 h2 {
+                text-align: center;
+            }
+            .question7 input{
+                display: flex;
+                flex-direction: column;
+               
+                margin: 20px;
+               
+            }
+            .input-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
 </style>
 
