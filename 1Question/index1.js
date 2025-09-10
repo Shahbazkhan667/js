@@ -22,33 +22,24 @@ document.getElementById("seconds").value = seconds;
 
 }
 
-  let word = document.getElementById("text");
-function capitaliseWord(){
-
-     let value = word.value;
-     if(value.length>0){
-        word.value = value.charAt(0).toUpperCase() + value.slice(1);
-     }
-
-   
-}
-console.log(word);
-
+ 
+ let arr=[100 ,200 ,300, 5000,] ;
+ 
+  
 function nextNumber(){
-    let arr =[ 4.8 ,9,12,23 ];
+  
     let n =Number(document.getElementById("integar").value);
     let index= arr.indexOf(n);
-    if (index !==-1 && index< arr.length -1){
-        document.getElementById("result").innerText= arr[index+1];
+       let newArr = arr.filter ( (e)=>{
+        return e>=n
+       })   
 
-    }
-
+console.log( newArr);
+let newA = newArr[index+1]
+document.getElementById("result").innerText=newA;
 }
 
-setTimeout(() => {
-    console.log("hi ")
-}, 3000);
-
+  
 
  function calculatenBmi(){
   let weight = document.getElementsByClassName("weight")[0].value;
@@ -104,4 +95,20 @@ calculatenBmi()
 
   inputOne.addEventListener("input", addNumbers);
   inputTwo.addEventListener("input", addNumbers);
+     let word = document.getElementById("text");
+function capitaliseWord(){
+  let value = word.value;
+  let words= value.split(" ");
+  let result =[];
+  for (let i=0; i< words.length; i++  ){
+    let w = words[i];
     
+     if(w.length>0){
+        result.push(w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+      
+     }
+   
+  
+}
+  word.value=result.join(" ")
+}
