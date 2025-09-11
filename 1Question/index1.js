@@ -23,21 +23,7 @@ document.getElementById("seconds").value = seconds;
 }
 
  
- let arr=[100 ,200 ,300, 5000,] ;
- 
-  
-function nextNumber(){
-  
-    let n =Number(document.getElementById("integar").value);
-    let index= arr.indexOf(n);
-       let newArr = arr.filter ( (e)=>{
-        return e>=n
-       })   
 
-console.log( newArr);
-let newA = newArr[index+1]
-document.getElementById("result").innerText=newA;
-}
 
   
 
@@ -112,3 +98,58 @@ function capitaliseWord(){
 }
   word.value=result.join(" ")
 }
+
+//  let arr=[100 ,200 ,300, 5000,] ;
+
+
+//  let num = document.getElementById("integar").value;
+//   console.log(num)
+
+
+// let b = Number(num);
+function nextNumber(){
+    let num = document.getElementById("integar").value;
+    let b =Number(num);
+     let y = 1;
+  let a = y += b;
+ document.getElementById("result").innerText=a;
+  if(num.includes(",")){
+let arr =num.split(",").map( x=> Number(x.trim()));
+let last = arr[arr.length -1]
+let r = last + 2;
+document.getElementById("result").innerText=r;
+    
+
+}
+else if( num % 1 !== 0){
+       let y= 0.1;
+       let e = y += b;
+       let x = Number(y.toFixed(1));
+document.getElementById("result").innerText=x;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     let n =Number(document.getElementById("integar").value);
+//     let index= arr.indexOf(n);
+//        let newArr = arr.filter ( (e)=>{
+//         return e>=n
+//        })   
+
+// console.log( newArr);
+// let newA = newArr[index+1]
+// document.getElementById("result").innerText=newA;
