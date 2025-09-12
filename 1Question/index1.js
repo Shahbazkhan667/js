@@ -116,16 +116,20 @@ function nextNumber(){
   if(num.includes(",")){
 let arr =num.split(",").map( x=> Number(x.trim()));
 let last = arr[arr.length -1]
-let r = last + 2;
+let r = last + 1;
 document.getElementById("result").innerText=r;
     
 
 }
-else if( num % 1 !== 0){
-       let y= 0.1;
-       let e = y += b;
-       let x = Number(y.toFixed(1));
-document.getElementById("result").innerText=x;
+// else if( num % 1 !== 0){
+ else if (num.includes(".")){
+       let [intPart ,decimalPart] =num.split(".");
+       let y= parseInt(decimalPart.slice(-1) );
+       let b = y += 1;
+       decimalPart =decimalPart.slice(-0 ,-1) + b;
+       let e = intPart + "." + decimalPart ;
+      //  let x = Number(e.toFixed(3));
+document.getElementById("result").innerText=e;
 
 }
 
