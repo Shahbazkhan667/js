@@ -107,23 +107,36 @@ function nextNumber(){
      let y = 1;
   let a = y += b;
  document.getElementById("result").innerText=a;
-  if(num.includes(",")){
-let arr =num.split(",").map( x=> Number(x.trim()));
-let last = arr[arr.length -1]
- if(num.includes(".")){
-  let [intPart ,decimalPart] =num.split(".");
-       let y= parseInt(decimalPart.slice(-1) );
-       let b = y += 1;
-       decimalPart =decimalPart.slice(-0 ,-1) + b;
-       let e = intPart + "." + decimalPart ;
-      //  let x = Number(e.toFixed(3));
-document.getElementById("result").innerText=e;
-    }
-    else{
-let r = last + 1;
-document.getElementById("result").innerText=r;
-    } 
+//   if(num.includes(",")){
+// let arr =num.split(",").map( x=> Number(x.trim()));
+// let last = arr[arr.length -1]
+//  if(num.includes(".")){
+//   let [intPart ,decimalPart] =num.split(".");
+//        let y= parseInt(decimalPart.slice(-1) );
+//        let b = y += 1;
+//        decimalPart =decimalPart.slice(-0 ,-1) + b;
+//        let e = intPart + "." + decimalPart ;
+//       //  let x = Number(e.toFixed(3));
+// document.getElementById("result").innerText=e;
+//     }
+//     else{
+// let r = last + 1;
+// document.getElementById("result").innerText=r;
+//     } 
 
+if (num.includes(",")) {
+  let arr = num.split(",").map(x => x.trim()); // array of numbers/strings
+  let last = arr[arr.length - 1]; // last element as string
+
+  if (last.includes(".")) {
+    
+    let result = (parseFloat(last) + 0.1).toFixed(1);
+    document.getElementById("result").innerText = result;
+  } else {
+    
+    let result = parseInt(last) + 1;
+    document.getElementById("result").innerText = result;
+  }
 }
 // else if( num % 1 !== 0){
  else if (num.includes(".")){
