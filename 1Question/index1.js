@@ -22,10 +22,6 @@ document.getElementById("seconds").value = seconds;
 
 }
 
- 
-
-
-  
 
  function calculatenBmi(){
   let weight = document.getElementsByClassName("weight")[0].value;
@@ -37,8 +33,6 @@ let hieght =document.getElementsByClassName("hieght")[0].value;
 }
 
 calculatenBmi()
-
-
 
     function generateRandomArray(length, maxValue) {
       let arr = [];
@@ -94,7 +88,7 @@ function capitaliseWord(){
       
      }
    
-  
+ 
 }
   word.value=result.join(" ")
 }
@@ -116,9 +110,19 @@ function nextNumber(){
   if(num.includes(",")){
 let arr =num.split(",").map( x=> Number(x.trim()));
 let last = arr[arr.length -1]
+ if(num.includes(".")){
+  let [intPart ,decimalPart] =num.split(".");
+       let y= parseInt(decimalPart.slice(-1) );
+       let b = y += 1;
+       decimalPart =decimalPart.slice(-0 ,-1) + b;
+       let e = intPart + "." + decimalPart ;
+      //  let x = Number(e.toFixed(3));
+document.getElementById("result").innerText=e;
+    }
+    else{
 let r = last + 1;
 document.getElementById("result").innerText=r;
-    
+    } 
 
 }
 // else if( num % 1 !== 0){
@@ -140,7 +144,10 @@ document.getElementById("result").innerText=e;
 
 
 
-
+//  let arr =num.split(",").map( x=> Number(x.trim()));
+// let last = arr[arr.length -1]
+//       let r = last + 0.1;
+//       document.getElementById("result").innerText=r;
 
 
 
@@ -157,3 +164,5 @@ document.getElementById("result").innerText=e;
 // console.log( newArr);
 // let newA = newArr[index+1]
 // document.getElementById("result").innerText=newA;
+
+
