@@ -130,13 +130,18 @@ if (num.includes(",")) {
 
   if (last.includes(".")) {
     
-    let result = (parseFloat(last) + 0.1).toFixed(1);
-    document.getElementById("result").innerText = result;
-  } else {
+ let [intPart ,decimalPart] =last.split(".");
+       let y= parseInt(decimalPart.slice(-1) );
+       let b = y += 1;
+       decimalPart =decimalPart.slice(-0 ,-1) + b;
+       let e = intPart + "." + decimalPart ;
+       document.getElementById("result").innerText = e;
+  // } else {
     
-    let result = parseInt(last) + 1;
-    document.getElementById("result").innerText = result;
-  }
+  //   let result = parseInt(last) + 1;
+  //   document.getElementById("result").innerText = result;
+  // } 
+}
 }
 // else if( num % 1 !== 0){
  else if (num.includes(".")){
